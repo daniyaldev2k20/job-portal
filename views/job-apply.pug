@@ -1,0 +1,36 @@
+extends base
+
+block content
+  main.main
+    .login-form
+      h2.heading-secondary.ma-bt-lg Job Application
+      form.form.form--apply
+        .form__group
+          label.form__label(for='name') Name
+          input#name.form__input(type='name', placeholder='ABC', required)
+        .form__group
+          label.form__label(for='currentAddress') Current Address
+          input#currentAddress.form__input(type='currentAddress', placeholder='I-8', required)
+        .form__group
+          label.form__label(for='city') City
+          input#city.form__input(type='city', placeholder='Islamabad', required)
+        .form__group
+          label.form__label(for='province') Province
+          input#province.form__input(type='province', placeholder='Islamabad Capital Territory', required)
+        .form__group
+          label.form__label(for='zipCode') Zip Code
+          input#zipCode.form__input(type='zipCode', placeholder='44000', required)  
+        .form__group
+          label.form__label(for='email') Email address
+          input#email.form__input(type='email', placeholder='abc@example.com', required)
+        .form__group
+          label.form__label(for='phone') Phone Number
+          input#phone.form__input(type='phone', placeholder='091-111-111', required)  
+        .form__group
+          label.form__label(for='position') Position
+          input#position.form__input(type='position', placeholder='backend', required)  
+        .form__group.form__photo-upload
+          input.form__upload(type="file", accept='application/pdf', id='resume', name='resume')
+          label(for='resume') Upload Resume        
+        .form__group
+          button.btn.btn--green Apply

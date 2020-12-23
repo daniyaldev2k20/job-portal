@@ -1,0 +1,16 @@
+extends base
+
+block content
+  main.main
+    .user-view__content
+      .user-view__form-container
+          h2.heading-secondary.ma-bt-md Candidate
+          form.form.form-user-data-delete
+            .form__group
+              label.form__label(for='cID') Candidate ID
+              input#cID.form__input(type='cID', value=`${candidate.id}`, readonly='')
+            .form__group
+              label.form__label(for='name') Name
+              input#name.form__input(type='name', value=`${candidate.name}`, readonly='')
+            .form__group
+              button.btn.btn--red Delete Candidate  

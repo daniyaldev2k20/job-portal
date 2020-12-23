@@ -1,0 +1,40 @@
+extends base
+
+block content
+  main.main
+    .user-view__content
+      .user-view__form-container
+          h2.heading-secondary.ma-bt-md Candidate
+          form.form.form-user-data
+            .form__group
+              label.form__label(for='cID') Candidate ID
+              input#cID.form__input(type='cID', value=`${candidate.id}`, readonly='')
+            .form__group
+              label.form__label(for='name') Name
+              input#name.form__input(type='name', value=`${candidate.name}`, required)
+            .form__group
+              label.form__label(for='currentAddress') Current Address
+              input#currentAddress.form__input(type='currentAddress',value=`${candidate.currentAddress}`, required)
+            .form__group
+              label.form__label(for='city') City
+              input#city.form__input(type='city', value=`${candidate.city}`, required)
+            .form__group
+              label.form__label(for='province') Province
+              input#province.form__input(type='province', value=`${candidate.province}`, required)
+            .form__group
+              label.form__label(for='zipCode') Zip Code
+              input#zipCode.form__input(type='zipCode', value=`${candidate.zipCode}`, required)  
+            .form__group
+              label.form__label(for='email') Email address
+              input#email.form__input(type='email',  value=`${candidate.email}`, required)
+            .form__group
+              label.form__label(for='phone') Phone Number
+              input#phone.form__input(type='phone', value=`${candidate.phone}`, required)  
+            .form__group
+              label.form__label(for='position') Position
+              input#position.form__input(type='position', value=`${candidate.position}`, required)  
+            .form__group.form__photo-upload
+              input.form__upload(type="file", accept='application/pdf', id='resume', name='resume')
+              label(for='resume') Upload Resume            
+            .form__group
+              button.btn.btn--green Apply Changes to Candidate
